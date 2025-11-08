@@ -1,10 +1,13 @@
 package br.com.johncobain.produtosapi.model;
 
-import lombok.Data;
+import jakarta.persistence.*;
 
 // Pojo -> Plain Old Java Object
+@Entity
+@Table(name = "produto")
 public class Produto {
 
+    @Id
     private String id;
     private String nome;
     private String descricao;
